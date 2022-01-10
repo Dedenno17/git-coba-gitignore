@@ -1,0 +1,98 @@
+// Git
+
+// => git command (local)
+// $ git init => ( menginisialisasi repo git )
+// $ git add <file(s)> => ( menambahkan file ke dalam staging area )
+// $ git status => ( mengtahui status repo )
+// $ git commit <5 digit hash commit> / <nama branch> => ( melakukan commit ) 
+// $ git config => ( memasukan konfigurasi )
+// $ git branch => ( melihat semua branch )
+// $ git help => ( memasukan perintah dengan cepat )
+// $ git checkout => (pindah ke dalam commit atau branch lain)
+// $ git commit -am => ( langsung mencommit tanpa harus memindahkan ke staging area menggunakan add, dengan syarat hanya file yang modified)
+// $ alias <nama alias>="<perintah yang ingin dimasukan/digantikan kedalam nama alias>" => (seperti variable dalam JS)
+// $ git merge <nama branch> (menggabungkan 2 branch)
+// $ git branch --merged => (melihat branch mana yang sudah di merge)
+// $ git config --list => untuk melihat seluruh configurasi dalam bentuk list
+
+// => ada 3 area pada repo
+
+//1 Working tree
+// => folder tempat bekerja / atau folder tempat menyimpan file file source code
+
+//2 staging area ( terdapat pada folder tersembunyi .git )
+// => untuk memberitahu git bahwa sudah dilakukan sebuah perubahan
+// => tempat sebelum melakukan commit pada perubahan
+
+// 3 history ( terdapat pada folder tersembunyi .git )
+// => tempat file setelah di commit
+// => melihat commit commit yang sudah di lakukan
+
+
+
+
+
+
+// Branch
+
+// Membuat Branch
+// => $ git branch <nama file>
+
+
+// merge branch
+// sebelum merge pindah terlebih dahulu kedalam branch master
+// Merge ada 2 jenis :
+// => fast forward ( tejadi ketika branch yang ingin digabungkan berada di jalur langsung(direct path)
+// => three way merge/merge commit ( terjadi ketika branch yang ingin digabungkan tidak berada dijalur langsung(direct path)
+
+
+// menghapus branch
+// => git branch -d <nama branch>
+// jika branch yang belum di merge akan dihapus akan muncul peringatan untuk merge branch tersebut terlebih dahulu
+// jika tetap ingin di hapus maka perintah nya : => $ git branch -D <nama branch>
+
+
+
+// Conflict
+// => ketika 2 buah branch yang ingin dimerge berubah pada baris yang sama
+// => harus diresolve secara manual/di pilih mana yang akan digunakan
+
+
+
+//deatech head
+// => ketika checkout kepada sebuah commit yang tidak mempunyai branch/sudah dihapus
+// => maka head yang seharusnya menempel kepada sebuah branch, kini menempel kepada sebuah commit
+
+
+
+// Remote
+
+// untuk mengecek remmote yang ada mnggunakan git remote
+// => $ git remote
+// => $ git remote -v (menampilkannya sedikit lebih lengkap)
+
+// Untuk menarik repo yang sebelumnya sudah ada di Github agar di local kita juga ada, adalah menggunakan git clone
+// => $ git clone <link github yang sebelumnya sudah dicpy terlebih dahuhlu>
+
+// untuk memberitahu github untuk perubahan yang kita lakukan di local, memakai git push
+// dalam kasus lain akan diminita untuk login terlebih dahulu, ikuti saja petunjuknya lalu login
+// => $ git push 
+
+// Untuk mengecek ada tidak perubahan yang terjadi pada remote atau
+// mengecek commit yang ada pada remote sudah sampai mana
+// => $ git fetch
+
+
+
+
+// gitignore
+
+// => sebuah file yang isinya adalah data dari file file apa saja yang akan diabaikan oleh git agar tidak ikut terbawa ke staging area ketika di add
+
+// => buat file .gitignore di repo yang dimaksudkan
+// => Masukan file file yang ingin di ignore
+
+// untuk mengetahui file apa saja yang harus di ignore bisa dilihat di :
+// => github.com/github/gitignore
+// => gitignore.io  
+
